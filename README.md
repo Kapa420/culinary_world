@@ -21,6 +21,18 @@ This is a small KittyStore. Has some functions as send message to any user, a CR
 - `manage.py` file: Django's main file
 - `requirements.txt` file: file containing all project dependencies
 
+## Users
+
+In order for a demo version, you can use the superuser by default or create a new superuse
+
+- Default superuser name: master
+- Default superuser password: 123456789
+
+Create a new superuser:
+
+`python manage.py createsuperuser`
+
+
 ## Contributing
 
 If you want to contribute to this project, follow these steps:
