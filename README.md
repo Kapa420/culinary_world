@@ -1,6 +1,6 @@
 # Project Name
 
-This is a small KittyStore. Has some functions as send message to any user, a CRUD for the items, etc.
+This is a small web project. Has some functions as send message to any user, a CRUD for the items, etc.
 
 ## Requirements
 
