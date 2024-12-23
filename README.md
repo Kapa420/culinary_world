@@ -1,4 +1,4 @@
-# Project Name
+# Culinary world
 
 This is a small web project. Has some functions as send message to any user, a CRUD for the items, etc.
 
