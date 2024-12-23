@@ -13,7 +13,6 @@ class NewItemForm(forms.ModelForm):
                   'category',
                   'name',
                   'description',
-                  'price',
                   'image',
                   )
     
@@ -23,8 +22,6 @@ class NewItemForm(forms.ModelForm):
             'name': forms.TextInput(attrs={
                 'class': INPUT_CLASSES}),
             'description': forms.Textarea(attrs={
-                'class': INPUT_CLASSES}),
-            'price': forms.NumberInput(attrs={
                 'class': INPUT_CLASSES}),
             'image': forms.FileInput(attrs={
                 'class': INPUT_CLASSES}),
@@ -36,9 +33,7 @@ class EditItemForm(forms.ModelForm):
         model = Item
         fields = ('name',
                   'description',
-                  'price',
-                  'image',
-                  'is_sold',
+                  'image'
                   )
     
         widgets = {
@@ -46,12 +41,6 @@ class EditItemForm(forms.ModelForm):
                 'class': INPUT_CLASSES}),
             'description': forms.Textarea(attrs={
                 'class': INPUT_CLASSES}),
-            'price': forms.NumberInput(attrs={
-                'class': INPUT_CLASSES}),
             'image': forms.FileInput(attrs={
-                'class': INPUT_CLASSES}),
-            'is_sold': forms.NullBooleanSelect(attrs={
-                'class': INPUT_CLASSES,
-            })
-            
+                'class': INPUT_CLASSES}),            
             }

@@ -9,7 +9,7 @@ def items(request):
     query = request.GET.get('query', '')
     category_id = request.GET.get('category', '')
     categories = Category.objects.all()
-    items = Item.objects.filter(is_sold=False)
+    items = Item.objects.all()
     
     if category_id:
         items = Item.objects.filter(Q(category_id=int(category_id)))
@@ -28,7 +28,7 @@ def items(request):
 
 def detail(request, item_id: int):
     item = get_object_or_404(Item, pk=item_id)
-    related_items = Item.objects.filter(category=item.category_id,is_sold=False).exclude(pk=item_id)[0:3]
+    related_items = Item.objects.filter(category=item.category_id).exclude(pk=item_id)[0:3]
     return render(request, 'item/detail.html', {
         'item': item,
         'related_items': related_items,

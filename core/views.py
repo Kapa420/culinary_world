@@ -5,12 +5,17 @@ from item.models import Item, Category
 from .forms import SignUpForm
 
 def index(request):
-    items = Item.objects.filter(is_sold=False).order_by('created_at')[0:3]
+    items = Item.objects.all()
     categories = Category.objects.all()
-    return render(request, 'core/index.html', {
-        'categories': categories,
-        'items': items,
-    })
+    return render(
+        request,
+        "core/index.html",
+        {
+            "categories": categories,
+            "items": items,
+        },
+    )
+
 
 def contact(request):
     return render(request, 'core/contact.html')
